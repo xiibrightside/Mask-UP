@@ -1,8 +1,7 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
-import { getDatabase } from "firebase/database";
 
-const config = {
+const firebaseConfig = {
   apiKey: "AIzaSyAB40ZCF9Cq4SbBEZCXFNjO_95oDEU8Aj0",
   authDomain: "maskup-5321c.firebaseapp.com",
   projectId: "maskup-5321c",
@@ -12,6 +11,5 @@ const config = {
   measurementId: "G-BZZKXKVP1K",
 };
 
-export const app = initializeApp(config);
+const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
-export const database = getDatabase(app);
