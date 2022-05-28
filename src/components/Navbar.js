@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import { UserAuth } from "../context/AuthContext";
+import "../App.css";
 
 const Navbar = () => {
   const { user, logOut } = UserAuth();
@@ -14,23 +15,27 @@ const Navbar = () => {
   };
 
   return (
-    <div className="flex justify-between bg-gray-200 w-full p-4">
-      <nav>
+    <div className="navcontainer">
+      <Link to="/home">
+        <h1 className="title1">MaskUP</h1>
+      </Link>
+      <nav className="my-auto">
         <NavLink to={"/home"}>Home</NavLink>
+        <NavLink to={"/bot"}>Bot</NavLink>
+        <NavLink to={"/guidelines"}>Guide</NavLink>
         <NavLink to={"/about"}>About</NavLink>
-        <NavLink to={"/camera"}>Camera</NavLink>
-        <NavLink to={"/guidelines"}>Guidelines</NavLink>
         <NavLink to={"/feedback"}>Feedback</NavLink>
+
+        {user?.displayName ? (
+          <button className="logoutbtn" onClick={handleSignOut}>
+            logout
+          </button>
+        ) : (
+          <Link to="/signin">
+            <button className="signinbtn">Sign In</button>
+          </Link>
+        )}
       </nav>
-      {user?.displayName ? (
-        <button className="logoutbtn" onClick={handleSignOut}>
-          Logout
-        </button>
-      ) : (
-        <Link to="/signin">
-          <button className="signinbtn">sign in</button>
-        </Link>
-      )}
     </div>
   );
 };

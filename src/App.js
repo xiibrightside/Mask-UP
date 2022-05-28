@@ -3,7 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import Protected from "./components/Protected";
 import { AuthContextProvider } from "./context/AuthContext";
 import About from "./pages/About";
-import Camera from "./pages/Camera";
+import Bot from "./pages/Bot";
 import Guidelines from "./pages/Guidelines";
 import LandingPage from "./pages/LandingPage";
 import Signin from "./pages/Signin";
@@ -27,10 +27,10 @@ function App() {
             }
           />
           <Route
-            path="/camera"
+            path="/bot"
             element={
               <Protected>
-                <Camera />
+                <Bot />
               </Protected>
             }
           />
