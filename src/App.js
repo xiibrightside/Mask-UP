@@ -1,28 +1,64 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import Navbar from "./components/Navbar";
 import Protected from "./components/Protected";
 import { AuthContextProvider } from "./context/AuthContext";
-import Account from "./pages/Account";
-import Home from "./pages/Home";
+import About from "./pages/About";
+import Camera from "./pages/Camera";
+import Guidelines from "./pages/Guidelines";
+import LandingPage from "./pages/LandingPage";
 import Signin from "./pages/Signin";
+import Home from "./pages/Home";
+import NotFound from "./pages/NotFound";
+import Feedback from "./pages/Feedback";
 
 function App() {
   return (
     <div>
       <AuthContextProvider>
-        <Navbar />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<LandingPage />} />
           <Route path="/signin" element={<Signin />} />
           <Route
-            path="/account"
+            path="/home"
             element={
               <Protected>
-                <Account />
+                <Home />
               </Protected>
             }
           />
+          <Route
+            path="/camera"
+            element={
+              <Protected>
+                <Camera />
+              </Protected>
+            }
+          />
+          <Route
+            path="/about"
+            element={
+              <Protected>
+                <About />
+              </Protected>
+            }
+          />
+          <Route
+            path="/guidelines"
+            element={
+              <Protected>
+                <Guidelines />
+              </Protected>
+            }
+          />
+          <Route
+            path="/feedback"
+            element={
+              <Protected>
+                <Feedback />
+              </Protected>
+            }
+          />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </AuthContextProvider>
     </div>
