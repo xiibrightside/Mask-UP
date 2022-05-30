@@ -22,13 +22,19 @@ const Signin = () => {
   }, [user]);
 
   return (
-    <div>
-      <div className="max-w-[240px] m-auto py-4">
-        <button onClick={handleGoogleSignIn}>Sign In here</button>
-        <Link to={"/"}>
-          <button>back</button>
-        </Link>
-      </div>
+    <div className="lpdiv col-span-3 gap-y-16">
+      <i class="icong fa-10x fa-brands fa-google"></i>
+      <button
+        className="botlink text-center text-5xl"
+        onClick={handleGoogleSignIn}
+      >
+        → Sign In ←
+      </button>
+      <Link to={"/"}>
+        <button>
+          <i class="icons fa-3x fa-solid fa-house"></i>
+        </button>
+      </Link>
     </div>
   );
 };

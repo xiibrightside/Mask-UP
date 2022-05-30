@@ -17,7 +17,7 @@ const Navbar = () => {
   return (
     <div className="navcontainer">
       <Link to="/home">
-        <h1 className="title1">MaskUP</h1>
+        <h1 className="title1 text-xl">MaskUP</h1>
       </Link>
       <nav className="my-auto">
         <NavLink to={"/home"}>Home</NavLink>

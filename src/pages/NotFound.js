@@ -6,7 +6,7 @@ const NotFound = () => {
     <div>
       <h1 className="title2 text-center">Error : 404</h1>
       <h1 className="title2 text-center">Page Not Found</h1>
-      <p className="para2 text-center">
+      <p className="para my-10 text-2xl text-center">
         {" "}
         Seems you've wandered into an Unknown Land, But there's nothing to
         explore, Would you rather just go back{" "}

@@ -5,7 +5,7 @@ const Guidelines = () => {
   return (
     <div>
       <Navbar />
-      guidelines page
+      <h1 className="title2">Guidelines</h1>
     </div>
   );
 };

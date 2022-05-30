@@ -1,14 +1,17 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "../App.css";
 
 const Home = () => {
   return (
     <body>
-      <Link to="/signin">
-        <button className="signinbtn">sign in</button>
-      </Link>
-      <h1 className="text-center text-3xl font-bold py-8">Landing Page</h1>
+      <div className="lpdiv col-span-2">
+        <h1 className="title1 text-9xl">MaskUP</h1>
+        <p className="para mt-10 text-3xl">Your Helping Hand</p>
+        <NavLink to={"/signin"}>
+          <button className="signinbtn mt-10">Get Started</button>
+        </NavLink>
+      </div>
     </body>
   );
 };

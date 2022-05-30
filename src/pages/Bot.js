@@ -26,7 +26,8 @@ const Camera = () => {
   return (
     <body>
       <Navbar />
-      <div className="camera">
+      <h1 className="title2 text-center">Camera</h1>
+      <div className="camera mt-16">
         <div className="bord">
           <video ref={videoRef}></video>
         </div>
