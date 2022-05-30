@@ -29,7 +29,7 @@ export default function Form() {
 
   return (
     <body className="feedbck">
-      <h1 className="title2 text-center">Feedback</h1>
+      <h1 className="title2 text-center">FEEDBACK</h1>
       <div className="container">
         <form ref={form} onSubmit={sendEmail} className="text-center">
           <input

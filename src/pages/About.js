@@ -5,19 +5,23 @@ const About = () => {
   return (
     <div className="text-center">
       <Navbar />
-      <h1 className="title2">About</h1>
-      <p className="para pt-2.5 pl-7 text-2xl">
-        This Mask Detection system Is Designed using State of the Art JavaScript
+      <h1 className="title2">ABOUT</h1>
+      <p className="para mt-5 text-center text-2xl">
+        This Mask Detection system Is Designed using latest JavaScript/ReactJS
         Front-End and a Custom Trained Tensorflow Datamodel to Detect a Live
         Feed of People and Classify between People who are and aren't wearing a
-        Face Mask and Project it's detections using Anchors and Tags.
+        Face Mask and Project it's detections under the feed as labels as well
+        as ring a voice prompt to notify/instruct civillians to wear their face
+        mask. This project is aimed towards small businesses and understaffed
+        commercial complexes to provide them a helping hand in maintaining
+        essential state mandated Virus outbreak guidelines
       </p>
-      <p className="para pt-10 pl-7 text-2xl">
+      <p className="para mt-5 text-center text-2xl">
         This Project was Created by :- Satyam Thakur, Ayush Arora, Hudaib
         Mahmood and Bhavjeet Singh for our B.Tech Final Year Project Submission.
       </p>
-      <h1 className="title2">Source Code</h1>
-      <p className="para pt-2.5 pl-7 text-2xl">
+      <h1 className="title2">SOURCE CODE</h1>
+      <p className="para mt-5 text-center text-2xl">
         Click on the Icon below to access the entire Source Code{" "}
       </p>
 

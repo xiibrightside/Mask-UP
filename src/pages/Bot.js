@@ -1,39 +1,39 @@
 /* eslint-disable no-unused-vars */
-import React, { useRef, useEffect, useState } from "react";
-import "../App.css";
+import React from "react";
 import Navbar from "../components/Navbar";
+import Entrance from "../images/entrance.jpg";
 
-const Camera = () => {
-  const videoRef = useRef(null);
-  const getVideo = () => {
-    navigator.mediaDevices
-      .getUserMedia({
-        video: { width: 1920, height: 1080 },
-      })
-      .then((stream) => {
-        let video = videoRef.current;
-        video.srcObject = stream;
-        video.play();
-      })
-      .catch((err) => {
-        console.error(err);
-      });
-  };
-  useEffect(() => {
-    getVideo();
-  }, [videoRef]);
-
+const Bot = () => {
   return (
-    <body>
+    <div>
       <Navbar />
-      <h1 className="title2 text-center">Camera</h1>
-      <div className="camera mt-16">
-        <div className="bord">
-          <video ref={videoRef}></video>
-        </div>
+      <h1 className="title2">INSTRUCTIONS</h1>
+      <ul>
+        <li>
+          <p className="para pt-4 pl-7 text-2xl w-4/5">
+            → Setup the Camera at the busy entrances
+          </p>
+        </li>
+        <li>
+          <p className="para pt-4 pl-7 text-2xl w-4/5">
+            → Make sure the camera is set at face level so it captures faces
+            clearly
+          </p>
+        </li>
+        <li>
+          <p className="para pt-4 pl-7 text-2xl w-4/5">
+            → Let the bot run in background and Relax
+          </p>
+        </li>
+      </ul>
+      <button className="readybtn">
+        <a href="cam.html">I'm Ready !!</a>
+      </button>
+      <div className="hero">
+        <img className="heroimg" src={Entrance} alt="hero"></img>
       </div>
-    </body>
+    </div>
   );
 };
 
-export default Camera;
+export default Bot;
