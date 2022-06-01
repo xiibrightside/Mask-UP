@@ -4,10 +4,10 @@ import Navbar from "../components/Navbar";
 
 const Feedback = () => {
   return (
-    <div>
+    <body>
       <Navbar />
       <Form />
-    </div>
+    </body>
   );
 };
 

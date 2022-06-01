@@ -1,0 +1,24 @@
+{
+  "steps": [
+    {
+      "key": "1",
+      "name": "Camera Perm",
+      "description": "Make sure you have given the browser Camera Permissions",
+      "image": {
+        "what": "../images/bot page/camera-perm.png"
+      }
+    },
+    {
+      "key": "2",
+      "name": "Setup",
+      "description": "Make sure to set your camera at the busy store entrance at head level ",
+      "image": "../images/bot page/setup.png"
+    },
+    {
+      "key": "3",
+      "name": "Finishing",
+      "description": "It is advised to let the website running in the background. Are you ready ?",
+      "image": "../images/bot page/ready.png"
+    }
+  ]
+}

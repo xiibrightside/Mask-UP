@@ -5,24 +5,9 @@ const About = () => {
   return (
     <div className="text-center">
       <Navbar />
-      <h1 className="title2">ABOUT</h1>
+      <h1 className="title2">SOURCE</h1>
       <p className="para mt-5 text-center text-2xl">
-        This Mask Detection system Is Designed using latest JavaScript/ReactJS
-        Front-End and a Custom Trained Tensorflow Datamodel to Detect a Live
-        Feed of People and Classify between People who are and aren't wearing a
-        Face Mask and Project it's detections under the feed as labels as well
-        as ring a voice prompt to notify/instruct civillians to wear their face
-        mask. This project is aimed towards small businesses and understaffed
-        commercial complexes to provide them a helping hand in maintaining
-        essential state mandated Virus outbreak guidelines
-      </p>
-      <p className="para mt-5 text-center text-2xl">
-        This Project was Created by :- Satyam Thakur, Ayush Arora, Hudaib
-        Mahmood and Bhavjeet Singh for our B.Tech Final Year Project Submission.
-      </p>
-      <h1 className="title2">SOURCE CODE</h1>
-      <p className="para mt-5 text-center text-2xl">
-        Click on the Icon below to access the entire Source Code{" "}
+        Click on the Icon below to access the entire <b>Source Code</b>{" "}
       </p>
 
       <div className="pt-8 pl-7 mb-10">
@@ -30,6 +15,17 @@ const About = () => {
           <i class="git fa-6x fa-brands fa-github"></i>
         </a>
       </div>
+      <p className="para mt-5 p-10 text-center text-2xl">
+        Designed to help understaffed, small-medium sized businesses in helping
+        them maintain WHO mandated guideline for Covid outbreak which is
+        primarily - ( <b>Wearing a Face Mask </b> ). We detect and prompt people
+        entering your commercial complex to follow the guidelines using a
+        machine learning approach
+      </p>
+      <p className="para mt-5 text-center text-2xl">
+        This Project was Created by :- Satyam Thakur, Ayush Arora, Hudaib
+        Mahmood and Bhavjeet Singh for our B.Tech Final Year Project Submission.
+      </p>
     </div>
   );
 };
