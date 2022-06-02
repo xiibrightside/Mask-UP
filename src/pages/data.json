@@ -2,23 +2,18 @@
   "steps": [
     {
       "key": "1",
-      "name": "Camera Perm",
-      "description": "Make sure you have given the browser Camera Permissions",
-      "image": {
-        "what": "../images/bot page/camera-perm.png"
-      }
+      "name": "PERMISSION",
+      "description": "Make Sure You Have Given The Browser Camera Permissions"
     },
     {
       "key": "2",
-      "name": "Setup",
-      "description": "Make sure to set your camera at the busy store entrance at head level ",
-      "image": "../images/bot page/setup.png"
+      "name": "SETUP",
+      "description": "Make Sure To Set Your Camera At Store Entrance At Head Level "
     },
     {
       "key": "3",
-      "name": "Finishing",
-      "description": "It is advised to let the website running in the background. Are you ready ?",
-      "image": "../images/bot page/ready.png"
+      "name": "FINISHING UP",
+      "description": "Keep Speakers In Audible Range Of The People. Are You Ready ?"
     }
   ]
 }

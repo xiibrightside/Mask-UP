@@ -5,7 +5,7 @@ import Protected from "./components/Protected";
 import { AuthContextProvider } from "./context/AuthContext";
 import About from "./pages/About";
 import Bot from "./pages/Bot";
-import Guidelines from "./pages/Guidelines";
+import Tracker from "./pages/Tracker";
 import LandingPage from "./pages/LandingPage";
 import Signin from "./pages/Signin";
 import Home from "./pages/Home";
@@ -44,10 +44,10 @@ function App() {
             }
           />
           <Route
-            path="/guidelines"
+            path="/tracker"
             element={
               <Protected>
-                <Guidelines />
+                <Tracker />
               </Protected>
             }
           />

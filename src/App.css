@@ -1,11 +1,25 @@
+/* =================== */
+/* all template colors */
+:root {
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+  --very-dark-blue-mainbg: hsl(217, 54%, 11%);
+  --very-dark-blue-cardbg: hsl(216, 50%, 16%);
+  --very-dark-blue-line: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+}
+
+/* =================== */
+/* default body values */
 body {
   font-family: "Montserrat", sans-serif;
   background-color: var(--very-dark-blue-mainbg);
 }
 
-/* landing page & Sign In Page elements */
-
-.lp {
+/* =================================== */
+/* landing page elements (prefixed-lp) */
+/* background */
+.lp-bg {
   background: url(./images/landingPage-Background.png) no-repeat;
   display: flex;
   justify-content: center;
@@ -18,22 +32,8 @@ body {
   min-width: 100%;
   min-height: 100%;
 }
-
-.sp {
-  background: url(./images/landingPage-Background.png) no-repeat;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  min-width: 100%;
-  min-height: 100%;
-}
-
-.opacity {
+/* opacity-mask (reusable )*/
+.lp-op {
   background: rgb(0, 0, 0, 0.4);
   display: flex;
   justify-content: center;
@@ -46,16 +46,17 @@ body {
   min-width: 100%;
   min-height: 100%;
 }
-
-.lpdiv {
+/* container ( reusable )*/
+.lp-con {
   padding: 50px;
   border-radius: 30px;
   display: flex;
   align-items: center;
   flex-direction: column;
 }
-
-.title1 {
+/* title large */
+.lp-tl {
+  font-size: 125px;
   font-weight: 700;
   color: var(--white);
   letter-spacing: 2px;
@@ -63,22 +64,16 @@ body {
   -moz-animation: glow 1s ease-in-out infinite alternate;
   animation: glow 1s ease-in-out infinite alternate;
 }
-
-.icong {
-  cursor: pointer;
-  color: white;
-  -webkit-animation: glow 1s ease-in-out infinite alternate;
-  -moz-animation: glow 1s ease-in-out infinite alternate;
-  animation: glow 1s ease-in-out infinite alternate;
-}
-
-.para {
+/* text */
+.lp-p {
+  font-size: 25px;
+  margin-top: 20px;
   font-weight: 400;
   letter-spacing: 2px;
   color: var(--soft-blue);
 }
-
-.signinbtn {
+/* get started button */
+.lp-gs {
   height: 50px;
   background-color: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
@@ -88,13 +83,14 @@ body {
   padding: 0 20px 0 20px;
   box-shadow: 0 0 5px rgb(255, 255, 255), 0 0 10px rgb(255, 255, 255);
 }
-.signinbtn:hover {
+/* hover state */
+.lp-gs:hover {
   background-color: rgb(0, 0, 0);
   color: white;
   box-shadow: 0 0 15px #fff, 0 0 30px #fff;
   transition: all 300ms ease-in-out;
 }
-
+/* glow value default ( reusable ) */
 @keyframes glow {
   from {
     text-shadow: 0 0 5px #fff, 0 0 10px #fff,
@@ -111,15 +107,62 @@ body {
   }
 }
 
-/* Navbar elements */
+/* =================================== */
+/* sign in page elements (prefixed-sp) */
+/* background */
+.sp-bg {
+  background: url(./images/landingPage-Background.png) no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+/* google icon */
+.sp-ico {
+  color: white;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+/* signin link */
+.botlink {
+  padding: 30px 0 30px 0;
+  font-size: 40px;
+  color: #ffffff;
+}
+/* hover state */
+.botlink:hover {
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff;
+  color: black;
+  transition: all 500ms ease-in-out;
+}
 
-.navcontainer {
+/* =================================== */
+/* navbar elements ( prefixed nb ) */
+/* main titular logo ( title - large ) */
+.nb-tl {
+  font-size: 55px;
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: 2px;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+/* container */
+.nb-con {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 20px;
+  padding: 10px 30px 0 30px;
 }
-
+/* navbar list using NavLink ( react-router-dom ) */
 nav {
   color: white;
   font-weight: 400;
@@ -129,185 +172,139 @@ nav {
   justify-content: space-between 25px;
   gap: 25px;
 }
-
+/* links */
 nav a {
   position: relative;
   color: white;
   cursor: pointer;
 }
-
+/* hover states */
 nav a:hover {
   color: var(--soft-blue);
   text-shadow: 0 0 2px rgb(131, 196, 226), 0 0 4px rgb(131, 196, 226);
   transition: all 300ms ease-in-out;
 }
-
+/* active states */
 nav a.active {
   color: var(--soft-blue);
   text-shadow: 0 0 2px rgb(131, 196, 226), 0 0 4px rgb(131, 196, 226);
   transition: all 300ms ease-in-out;
 }
 
-.logoutbtn {
-  height: 30px;
-  background-color: rgb(99, 223, 181);
-  color: black;
-  font-weight: 700;
-  border-radius: 20px;
-  padding: 0 10px 0 10px;
+/* =================================== */
+/* home page elements ( prefixed hp ) */
+/* background */
+.hp-bg {
+  background: url(./images/homepage-background.png) no-repeat fixed;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
 }
-.logoutbtn:hover {
-  background-color: aquamarine;
-  box-shadow: rgba(0, 0, 0, 0.74) 0px 8px 13px;
-  transition: all 400ms ease-in-out;
+/* opacity - mask */
+.hp-op {
+  background: rgb(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
 }
-
-/* Home page elements */
-
-.title2 {
-  padding: 50px 0 0 20px;
-  font-weight: 400;
-  color: var(--white);
+/* title - medium */
+.hp-tm {
   font-size: 100px;
+  font-weight: 400;
+  color: var(--white);
   letter-spacing: 1px;
+  margin: 50px 0 0 20px;
 }
-
-.git {
-  color: #ffffff;
-  -webkit-animation: glow 1s ease-in-out infinite alternate;
-  -moz-animation: glow 1s ease-in-out infinite alternate;
-  animation: glow 1s ease-in-out infinite alternate;
-}
-
-.git:hover {
-  text-shadow: 0 0 5px #fff, 0 0 10px #fff;
-  color: black;
-  transition: all 500ms ease-in-out;
-}
-
-.bord {
-  border-radius: 15px;
-  overflow: hidden;
-}
-
-.camera {
-  padding: 15px;
-  border-radius: 15px;
-  background-color: var(--very-dark-blue-cardbg);
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  box-shadow: rgba(0, 0, 0, 0.54) 0px 5px 10px;
-}
-
-.signed {
+/* display name */
+.hp-dn {
   display: flex;
-  padding: 0 0 30px 30px;
-  font-family: "Shadows Into Light", cursive;
-  font-weight: 400;
-  color: var(--white);
-  font-size: 35px;
-  letter-spacing: 2px;
-}
-
-.hero {
-  margin: 30px 30% 30px 30px;
-  border-radius: 20px;
-  overflow: hidden;
-  width: 70%;
-}
-
-.subtitle {
-  display: flex;
-  font-weight: 400;
-  color: var(--white);
-  font-size: 35px;
-  letter-spacing: 2px;
-}
-
-.subtitle2 {
-  position: relative;
-  top: 10px;
-  font-weight: 400;
-  color: var(--white);
-  font-size: 35px;
-  letter-spacing: 2px;
-}
-
-.botlink {
-  color: #ffffff;
-}
-
-.botlink:hover {
-  text-shadow: 0 0 5px #fff, 0 0 10px #fff;
-  color: black;
-  transition: all 500ms ease-in-out;
-}
-
-.signinpage {
-  display: flex;
-  flex-direction: column;
-  gap: 60px;
-  margin-top: 15%;
-  padding: 0;
-}
-
-.icons {
-  cursor: pointer;
-  color: white;
-}
-
-.icons:hover {
-  text-shadow: 0 0 5px #fff, 0 0 10px #fff;
-  color: black;
-  transition: all 500ms ease-in-out;
-}
-
-.readybtn {
-  height: 50px;
-  position: relative;
-  margin: 40px 0 25px 30px;
-  background-color: rgb(255, 255, 255);
-  color: rgb(0, 0, 0);
-  font-size: 30px;
-  font-weight: 700;
-  border-radius: 50px;
-  padding: 0 20px 0 20px;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 2px 5px;
-}
-.readybtn:hover {
-  background-color: rgb(0, 0, 0);
-  color: white;
-  box-shadow: 0 0 5px #fff, 0 0 10px #fff;
-  transition: all 500ms ease-in-out;
-}
-
-/* Bot Page CSS */
-
-.circles {
-  display: flex;
-  justify-content: flex-start;
-}
-
-.container2 {
+  margin: 0 0 0 30px;
   font-family: "Roboto Mono", monospace;
-  width: 70%;
-  margin: 50px 15% 0 15%;
+  font-weight: 400;
+  color: var(--white);
+  font-size: 35px;
+}
+/* home - text */
+.hp-p {
+  font-size: 35px;
+  width: 80%;
+  margin: 20px 0 0 20px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  color: var(--soft-blue);
+}
+/* in-line link */
+.hp-l {
+  padding: 30px 0 30px 0;
+  font-size: 35px;
+  color: #ffffff;
+}
+/* hover state */
+.hp-l:hover {
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff;
+  color: black;
+  transition: all 500ms ease-in-out;
+}
+
+/* ================================= */
+/* bot page elements ( prefixed bp ) */
+/* background */
+.bp-bg {
+  background: url(./images/bot-page-background.png) no-repeat fixed;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+/* container */
+.bp-con {
+  width: fit-content;
+  margin-top: 40px;
+  border-radius: 30px;
   padding: 30px;
-  background-color: var(--very-dark-blue-cardbg);
+  background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
   flex-direction: column;
   box-shadow: rgba(0, 0, 0, 0.55) 0px 5px 10px;
+  letter-spacing: 2px;
 }
-
-.ugh {
+/* numbers in circles */
+.bp-circ {
+  box-shadow: rgba(0, 0, 0, 0.55) 0px 6px 12px;
+}
+/* hover state */
+.bp-circ:hover {
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+/* small line under the nuumbers */
+.bp-rect {
+  width: 700px;
+  height: 2px;
+  margin-top: 10px;
+  background-color: pink;
+  box-shadow: rgba(0, 0, 0, 0.55) 0px 5px 10px;
+}
+/* ready button */
+.bp-readybtn {
   display: flex;
   justify-content: center;
-  margin-top: 30px;
+  margin-top: 50px;
 }
-.sex {
+.bp-readylink {
   height: 50px;
   background-color: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
@@ -317,10 +314,208 @@ nav a.active {
   padding: 2px 20px 0 20px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 2px 5px;
 }
-
-.sex:hover {
+.bp-readylink:hover {
   background-color: rgb(0, 0, 0);
   color: white;
   box-shadow: 0 0 5px #fff, 0 0 10px #fff;
   transition: all 300ms ease-in-out;
 }
+
+/* =================================== */
+/* tracker page elements ( prefixed tp ) */
+/* background */
+.tp-bg {
+  background: url(./images/tracker-page-background.png) no-repeat center/cover;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+/* container */
+.tp-con {
+  font-family: "Roboto Mono", monospace;
+  background-color: var(--very-dark-blue-cardbg);
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 15px;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 3px 8px;
+}
+/* input form */
+.tp-f-input input {
+  padding: 10px;
+  border-radius: 15px;
+  margin-top: 20px;
+  box-shadow: inset rgba(0, 0, 0, 0.35) 0px 3px 8px;
+}
+/* input button */
+.tp-f-input button {
+  font-weight: 700;
+  color: white;
+  background-color: var(--soft-blue);
+  width: 120px;
+  height: 50px;
+  border-radius: 35px;
+  box-shadow: rgba(0, 0, 0, 0.65) 0px 7px 12px;
+  letter-spacing: 1px;
+}
+/* hover - active state */
+.tp-f-input button:hover {
+  transition: all 300ms ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.65) 0px 7px 12px;
+  background-color: white;
+  color: var(--soft-blue);
+}
+/* details */
+.tp-info {
+  border-radius: 15px;
+  font-size: 20px;
+  font-family: "Roboto Mono", monospace;
+  width: 500px;
+  margin-top: 20px;
+  background-color: white;
+  padding: 10px;
+  box-shadow: inset rgba(0, 0, 0, 0.35) 0px 3px 8px;
+}
+
+/* =================================== */
+/* about page elements ( prefixed ap ) */
+/* background */
+.ap-bg {
+  background: url(./images/about-page-background.png) no-repeat fixed;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+/* github icon */
+.git-con {
+  margin-top: 30px;
+}
+.git {
+  color: #ffffff;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+/* hover state */
+.git:hover {
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff;
+  color: black;
+  transition: all 500ms ease-in-out;
+}
+/* text */
+.ap-p {
+  font-size: 25px;
+  margin: 20px 10% 0 10%;
+  font-weight: 400;
+  letter-spacing: 2px;
+  color: var(--soft-blue);
+}
+
+/* =================================== */
+/* about page elements ( prefixed ap ) */
+/* background */
+.fp-bg {
+  background: url(./images/feedback-page-background.png) no-repeat fixed;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+/* container */
+.fp-con {
+  margin-top: 80px;
+  font-family: "Roboto Mono", monospace;
+  width: 400px;
+  height: 440px;
+  padding: 30px;
+  background-color: var(--very-dark-blue-cardbg);
+  position: absolute;
+  border-radius: 15px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: rgba(0, 0, 0, 0.55) 0px 5px 10px;
+}
+/* all form elements */
+form {
+  display: flex;
+  flex-direction: column;
+}
+#name {
+  border-radius: 15px;
+  margin-top: 20px;
+  box-shadow: inset rgba(0, 0, 0, 0.35) 0px 3px 8px;
+}
+#email {
+  border-radius: 15px;
+  margin-top: 20px;
+  box-shadow: inset rgba(0, 0, 0, 0.35) 0px 3px 8px;
+}
+#message {
+  border-radius: 15px;
+  padding: 5px;
+  margin-top: 20px;
+  box-shadow: inset rgba(0, 0, 0, 0.35) 0px 3px 8px;
+}
+/* submit button */
+.fp-cta {
+  margin-top: 30px;
+  font-weight: 700;
+  color: white;
+  background-color: var(--soft-blue);
+  width: 120px;
+  height: 50px;
+  border-radius: 35px;
+  box-shadow: rgba(0, 0, 0, 0.65) 0px 7px 12px;
+  letter-spacing: 1px;
+}
+.fp-cta:hover {
+  transition: all 300ms ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.65) 0px 7px 12px;
+  background-color: white;
+  color: var(--soft-blue);
+}
+.fp-cta:active {
+  box-shadow: inset rgba(0, 0, 0, 0.35) 0px 3px 8px;
+}
+
+/* @media only screen and (max-width: 540px) {
+  .container {
+    margin-top: 100px;
+    width: 280px;
+    height: 360px;
+    padding: 10px;
+  }
+
+  #name {
+    margin-top: 15px;
+  }
+
+  #email {
+    margin-top: 15px;
+  }
+
+  #message {
+    margin-top: 15px;
+  }
+
+  .cta {
+    margin-top: 15px;
+    width: 90px;
+    height: 30px;
+  }
+} */

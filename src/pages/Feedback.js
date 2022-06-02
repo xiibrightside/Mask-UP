@@ -4,10 +4,13 @@ import Navbar from "../components/Navbar";
 
 const Feedback = () => {
   return (
-    <body>
-      <Navbar />
-      <Form />
-    </body>
+    <div className="fp-bg">
+      <div className="hp-op">
+        <Navbar />
+        <h1 className="hp-tm text-center">FEEDBACK</h1>
+        <Form />
+      </div>
+    </div>
   );
 };
 

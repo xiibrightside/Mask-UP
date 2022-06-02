@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
-import "./Form.css";
+import "../App.css";
 
 export default function Form() {
   const form = useRef();
@@ -28,40 +28,37 @@ export default function Form() {
   }
 
   return (
-    <body className="feedbck">
-      <h1 className="title2 text-center">FEEDBACK</h1>
-      <div className="container">
-        <form ref={form} onSubmit={sendEmail} className="text-center">
-          <input
-            className="text-center "
-            type="text"
-            id="name"
-            placeholder="Your Name"
-            required
-          ></input>
+    <div className="fp-con">
+      <form ref={form} onSubmit={sendEmail} className="text-center">
+        <input
+          className="text-center"
+          type="text"
+          id="name"
+          placeholder="Your Name"
+          required
+        ></input>
 
-          <input
-            className="text-center "
-            type="email"
-            id="email"
-            placeholder="Email"
-            required
-          ></input>
+        <input
+          className="text-center"
+          type="email"
+          id="email"
+          placeholder="Email"
+          required
+        ></input>
 
-          <textarea
-            className=" text-center form-control"
-            id="message"
-            cols="30"
-            rows="8"
-            placeholder="Provide us your Honest Feedback, so we can improve on it"
-            name="message"
-          ></textarea>
+        <textarea
+          className=" text-center form-control"
+          id="message"
+          cols="30"
+          rows="8"
+          placeholder="Provide us your Honest Feedback, so we can improve on it"
+          name="message"
+        ></textarea>
 
-          <button className="cta text-center mx-auto" type="submit">
-            SUBMIT
-          </button>
-        </form>
-      </div>
-    </body>
+        <button className="fp-cta text-center mx-auto" type="submit">
+          SUBMIT
+        </button>
+      </form>
+    </div>
   );
 }

@@ -15,24 +15,25 @@ const Navbar = () => {
   };
 
   return (
-    <div className="navcontainer">
+    <div className="nb-con">
       <Link to="/home">
-        <h1 className="title1 text-5xl">MaskUP</h1>
+        <h1 className="nb-tl">MaskUP</h1>
       </Link>
       <nav className="my-auto">
         <NavLink to={"/home"}>Home</NavLink>
         <NavLink to={"/bot"}>Bot</NavLink>
-        <NavLink to={"/guidelines"}>Guide</NavLink>
+        <NavLink to={"/tracker"}>Track</NavLink>
         <NavLink to={"/about"}>About</NavLink>
         <NavLink to={"/feedback"}>Feedback</NavLink>
-
         {user?.displayName ? (
-          <button className="logoutbtn" onClick={handleSignOut}>
-            logout
+          <button onClick={handleSignOut}>
+            <i class="fa-solid fa-arrow-right-from-bracket"></i>
           </button>
         ) : (
           <Link to="/signin">
-            <button className="signinbtn">Sign In</button>
+            <button>
+              <i class="fa-solid fa-arrow-right-to-bracket"></i>
+            </button>
           </Link>
         )}
       </nav>
