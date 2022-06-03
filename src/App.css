@@ -13,7 +13,7 @@
 /* default body values */
 body {
   font-family: "Montserrat", sans-serif;
-  background-color: var(--very-dark-blue-mainbg);
+  background-color: black;
 }
 
 /* =================================== */
@@ -280,8 +280,19 @@ nav a.active {
   box-shadow: rgba(0, 0, 0, 0.55) 0px 5px 10px;
   letter-spacing: 2px;
 }
+.bp-tm {
+  font-size: 100px;
+  font-weight: 400;
+  color: var(--white);
+  letter-spacing: 1px;
+  margin: 50px 0 0 0;
+}
 /* numbers in circles */
 .bp-circ {
+  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+  font-size: 36px;
   box-shadow: rgba(0, 0, 0, 0.55) 0px 6px 12px;
 }
 /* hover state */
@@ -493,29 +504,238 @@ form {
   box-shadow: inset rgba(0, 0, 0, 0.35) 0px 3px 8px;
 }
 
-/* @media only screen and (max-width: 540px) {
-  .container {
-    margin-top: 100px;
+/* =================================== */
+/* notfound page elements ( prefixed np ) */
+/* background */
+.np-bg {
+  background: url(./images/nf-page-background.png) no-repeat fixed;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+/* title */
+.np-tm {
+  margin-top: 50px;
+  font-size: 100px;
+  font-weight: 400;
+  color: var(--white);
+  letter-spacing: 1px;
+}
+/* icon container */
+.nf-con {
+  margin-top: 30px;
+}
+.nf {
+  color: var(--white);
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+/* hover state */
+.nf:hover {
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff;
+  color: black;
+  transition: all 500ms ease-in-out;
+}
+/* text */
+.np-p {
+  font-size: 35px;
+  margin: 50px 10% 0 10%;
+  font-weight: 400;
+  letter-spacing: 2px;
+  color: var(--white);
+}
+
+/* ============================== */
+/* ============================== */
+/* media queries - mobile version */
+@media only screen and (max-width: 540px) {
+  /* =================================== */
+  /* landing page elements (prefixed-lp) */
+  .lp-bg {
+    background: url(./images/landingPage-Background.png) no-repeat center;
+  }
+  .lp-tl {
+    font-size: 65px;
+  }
+  .lp-p {
+    font-size: 18px;
+    margin-top: 15px;
+    text-align: center;
+  }
+  .lp-gs {
+    height: 30px;
+    font-size: 20px;
+    border-radius: 15px;
+    padding: 0 15px 0 15px;
+  }
+  /* =================================== */
+  /* sign in page elements (prefixed-sp) */
+  .sp-bg {
+    background: url(./images/landingPage-Background.png) no-repeat center;
+  }
+  .botlink {
+    margin-top: 15px;
+    font-size: 20px;
+  }
+  /* =================================== */
+  /* navbar elements ( prefixed nb ) */
+  .nb-tl {
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: center;
+    font-size: 30px;
+  }
+  .nb-con {
+    flex-direction: column;
+    padding: 10px 10px 0 10px;
+  }
+  nav {
+    font-size: 14px;
+    justify-content: flex-start;
+    justify-content: space-between 15.5px;
+    gap: 15.5px;
+  }
+  /* =================================== */
+  /* home page elements ( prefixed hp ) */
+  .hp-bg {
+    background: url(./images/homepage-background.png) no-repeat center;
+  }
+  .hp-tm {
+    font-size: 40px;
+    margin: 30px 0 0 10px;
+  }
+  .hp-dn {
+    margin: -5px 0 0 12px;
+    font-size: 25px;
+  }
+  .hp-p {
+    font-size: 20px;
+    width: 90%;
+    margin: 10px 0 0 12px;
+    letter-spacing: 1px;
+  }
+  .hp-l {
+    font-size: 20px;
+  }
+  .hp-l:active {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff;
+    color: black;
+    transition: all 500ms ease-in-out;
+  }
+  /* ================================= */
+  /* bot page elements ( prefixed bp ) */
+  .bp-bg {
+    background: url(./images/bot-page-background.png) no-repeat center;
+  }
+  .bp-tm {
+    font-size: 40px;
+    margin: 30px 0 0 0;
+  }
+  .bp-con {
+    width: 300px;
+    margin-top: 30px;
+    padding: 20px;
+    background-color: rgba(119, 119, 119, 0.5);
+  }
+  .bp-circ {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+  .bp-rect {
+    width: 260px;
+  }
+  .bp-readybtn {
+    margin-top: 20px;
+  }
+  .bp-readylink {
+    height: 30px;
+    font-size: 15px;
+    padding: 3.5px 10px 0 10px;
+  }
+  /* ===================================== */
+  /* tracker page elements ( prefixed tp ) */
+  .tp-bg {
+    background: url(./images/tracker-page-background.png) no-repeat center;
+  }
+  .tp-con {
+    width: 300px;
+    padding: 10px;
+  }
+  .tp-f-input input {
+    padding: 5px;
+    margin-top: 10px;
+  }
+  .tp-f-input button {
+    width: 80px;
+    height: 30px;
+  }
+  .tp-info {
+    font-size: 15px;
+    width: 280px;
+    margin: 30px 0 5px 0;
+    padding: 10px;
+  }
+  /* =================================== */
+  /* about page elements ( prefixed ap ) */
+  .ap-bg {
+    background: url(./images/about-page-background.png) no-repeat center;
+  }
+  .git-con {
+    margin-top: 20px;
+  }
+  .ap-p {
+    font-size: 14px;
+    margin: 20px 10px 0 10px;
+  }
+  /* =================================== */
+  /* about page elements ( prefixed ap ) */
+  .fp-bg {
+    background: url(./images/feedback-page-background.png) no-repeat center;
+  }
+  .fp-con {
+    margin-top: 80px;
     width: 280px;
     height: 360px;
     padding: 10px;
   }
-
+  form {
+    display: flex;
+    flex-direction: column;
+  }
   #name {
     margin-top: 15px;
   }
-
   #email {
     margin-top: 15px;
   }
-
   #message {
     margin-top: 15px;
   }
-
-  .cta {
+  .fp-cta {
     margin-top: 15px;
     width: 90px;
     height: 30px;
   }
-} */
+  /* ====================================== */
+  /* notfound page elements ( prefixed np ) */
+  .np-bg {
+    background: url(./images/nf-page-background.png) no-repeat center;
+  }
+  .np-tm {
+    margin-top: 20px;
+    font-size: 50px;
+  }
+  .nf-con {
+    margin-top: 30px;
+  }
+  .np-p {
+    font-size: 15px;
+    margin: 10px 10px 0 10px;
+  }
+}

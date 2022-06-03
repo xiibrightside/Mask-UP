@@ -1,70 +1,48 @@
-# Getting Started with Create React App
+# B.Tech Final Year ( Major ) Project - MaskUP
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Designed to help understaffed, small / medium sized businesses in
+helping them maintain WHO mandated guideline for Covid outbreak
+which is primarily → ( Wearing a Face Mask ). We detect and
+prompt people entering your commercial complex to follow the
+guidelines using a Machine Learning approach.
 
-## Available Scripts
+### Screenshots :-
 
-In the project directory, you can run:
+- Landing Page
+  ![](./public/screenshots/landing-page.PNG)
 
-### `npm start`
+- SignIn Page ( Google Authentication - Firebase)
+  ![](./public/screenshots/signin-page.PNG)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- SignIn Pop-UP
+  ![](./public/screenshots/popup.png)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Home Page
+  ![](./public/screenshots/home-page.PNG)
 
-### `npm test`
+- Bot Page
+  ![](./public/screenshots/bot-page.PNG)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Detection Screen - Mask
+  ![](./public/screenshots/mask.PNG)
 
-### `npm run build`
+- Detection Screen - No Mask
+  ![](./public/screenshots/no-mask.PNG)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Tracker Page ( Using disease.sh/ API )
+  ![](./public/screenshots/tracker-page.PNG)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- About Page ( Contains Our Source Code )
+  ![](./public/screenshots/about-page.PNG)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Feedback Page ( Email.JS )
+  ![](./public/screenshots/feedback-page.PNG)
 
-### `npm run eject`
+### Links
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Live Site URL :
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Built with
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- ReactJS
+- TensorflowJS

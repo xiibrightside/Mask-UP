@@ -49,7 +49,7 @@ function Data() {
 
   return (
     <div className="tp-con mx-auto">
-      <h1 className="ap-p text-center">COUNTRY WISE TRACKER</h1>
+      <h1 className="tp-p text-center text-blue-200">COUNTRY WISE TRACKER</h1>
       <div className="tp-f-input text-center">
         <form onSubmit={handleSubmit}>
           <input onChange={handleSearch} placeholder="Enter Country Name" />
@@ -59,7 +59,7 @@ function Data() {
           </button>
         </form>
       </div>
-      <div className="tp-info">
+      <div className="tp-info text-center">
         <p>Country Name : {country} </p>
         <p>Cases : {cases}</p>
         <p>Deaths : {deaths}</p>
