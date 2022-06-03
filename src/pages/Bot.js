@@ -64,7 +64,10 @@ const Bot = () => {
           delayInMilliseconds={200}
         >
           <div className="bp-readybtn">
-            <a href="#0" className="bp-readylink">
+            <a
+              href="https://xiibrightside.github.io/maskup-back/"
+              className="bp-readylink"
+            >
               I'm Ready !
             </a>
           </div>
