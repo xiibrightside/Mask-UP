@@ -14,20 +14,11 @@ guidelines using a Machine Learning approach.
 - SignIn Page ( Google Authentication - Firebase)
   ![](./public/screenshots/signin-page.PNG)
 
-- SignIn Pop-UP
-  ![](./public/screenshots/popup.png)
-
 - Home Page
   ![](./public/screenshots/home-page.PNG)
 
 - Bot Page
   ![](./public/screenshots/bot-page.PNG)
-
-- Detection Screen - Mask
-  ![](./public/screenshots/mask.PNG)
-
-- Detection Screen - No Mask
-  ![](./public/screenshots/no-mask.PNG)
 
 - Tracker Page ( Using disease.sh/ API )
   ![](./public/screenshots/tracker-page.PNG)
